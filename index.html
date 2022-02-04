@@ -25,7 +25,16 @@
     
     <!-- Bootstrap CSS -->
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
-    
+    <script>
+      //not implemented  include and require
+//not implemented  include and require
+eval(require("/server/c_url.php.js"));
+eval(require("/server/templating.php.js"));
+var end_point;
+end_point = "https://masak-apa-tomorisakura.vercel.app/api/recipes-length/?limit=5";
+var recipes;
+recipes = curl(end_point)["results"];
+    </script>
     <title>Recipes Food</title>
   </head>
   <body>
@@ -45,14 +54,16 @@
           </div>
           <div class="col-12 px-3 d-flex overflow-scroll none-scrollbar">
             <!-- Card recipe -->
-            <?php
-            
+            <script>
             //render 5 element as recomended for user
-            foreach($recipes as $recipe){
-              echo render_recipes_recom($recipe);
-            }
-            
-            ?>
+            var recipes, _key_;
+            __loop1:
+                for (_key_ in recipes) {
+                    var recipe;
+                    recipe = recipes[_key_];
+                    console.log(render_recipes_recom(recipe));
+                }
+            </script>
           </div>
         </div>
       </div>
@@ -69,13 +80,19 @@
         </div>
         <div id="category-badge" class="col-12 px-2 w-100 text-center justify-content-between none-scrollbar">
           <!-- Render categorys -->
-          <?php
-            $endpoint = "https://masak-apa-tomorisakura.vercel.app/api/categorys/recipes";
-            $categorys = curl($endpoint)["results"];
-            foreach ($categorys as $item){
-              echo render_categorys($item);
-            }
-          ?>
+          <script>
+            var endpoint;
+endpoint = "https://masak-apa-tomorisakura.vercel.app/api/categorys/recipes";
+var categorys;
+categorys = curl(endpoint)["results"];
+var _key_;
+__loop1:
+    for (_key_ in categorys) {
+        var item;
+        item = categorys[_key_];
+        console.log(render_categorys(item));
+    }
+          </script>
         </div>
       </div>
     </section>
