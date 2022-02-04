@@ -1,6 +1,6 @@
 <?php
-require("server/c_url.php");
-require("server/templating.php");
+require("/server/c_url.php");
+require("/server/templating.php");
 
 $end_point = "https://masak-apa-tomorisakura.vercel.app/api/recipes-length/?limit=5";
 $recipes = curl($end_point)["results"];
@@ -17,10 +17,10 @@ $recipes = curl($end_point)["results"];
     <meta name="theme-color" content="#FA9151" />
     
     <!-- Web manifest -->
-    <link rel="manifest" href="manifest.json" type="aplication/json"/>
+    <link rel="manifest" href="/manifest.json" type="aplication/json"/>
     
     <!-- Icons -->
-    <link rel="icon" href="assets/icons/icon-72x72.png" type="images/png" />
+    <link rel="icon" href="/assets/icons/icon-72x72.png" type="images/png" />
     
     <!-- Poppins Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -30,11 +30,11 @@ $recipes = curl($end_point)["results"];
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/home.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="css/utilities.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/home.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/utilities.css" type="text/css" media="all" />
     
     <!-- Bootstrap CSS -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
     
     <title>Recipes Food</title>
   </head>
@@ -145,14 +145,14 @@ $recipes = curl($end_point)["results"];
     
     <!-- Optional JavaScript; choose one of the two! -->
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="bootstrap/js/bootstrap.bundle.min.js" ></script>
+    <script src="/bootstrap/js/bootstrap.bundle.min.js" ></script>
     <!-- Script custom and render element-->
-    <script src="js/min-width.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/heading.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/about.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/footer.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/searching.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/renderSavedPost.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/min-width.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/heading.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/about.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/footer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/searching.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/renderSavedPost.js" type="text/javascript" charset="utf-8"></script>
     
   </body>
 </html>
