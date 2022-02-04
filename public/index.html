@@ -1,13 +1,3 @@
-<?php
-require("server/c_url.php");
-require("server/templating.php");
-
-$end_point = "https://masak-apa-tomorisakura.vercel.app/api/recipes-length/?limit=5";
-$recipes = curl($end_point)["results"];
-
-?>
-
-
 <!doctype html>
 <html lang="en">
   <head>
