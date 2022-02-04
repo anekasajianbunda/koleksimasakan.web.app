@@ -1,10 +1,8 @@
 <?php
 require("server/c_url.php");
 require("server/templating.php");
-
-$end_point = "https://masak-apa-tomorisakura.vercel.app/api/recipes-length/?limit=5";
+$end_point = "https://koleksimasakan.web.app/api/recipes-length/?limit=5";
 $recipes = curl($end_point)["results"];
-
 ?>
 
 
@@ -80,7 +78,7 @@ $recipes = curl($end_point)["results"];
         <div id="category-badge" class="col-12 px-2 w-100 text-center justify-content-between none-scrollbar">
           <!-- Render categorys -->
           <?php
-            $endpoint = "https://masak-apa-tomorisakura.vercel.app/api/categorys/recipes";
+            $endpoint = "https://koleksimasakan.web.app/api/categorys/recipes";
             $categorys = curl($endpoint)["results"];
             foreach ($categorys as $item){
               echo render_categorys($item);
