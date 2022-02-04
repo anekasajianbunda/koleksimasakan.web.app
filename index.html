@@ -108,17 +108,23 @@ __loop1:
           <!-- Content -->
           <!-- Card Recipe --->
           <div class="col-12 px-3 d-flex flex-wrap justify-content-between">
-            <?php
-            
-            for ( $i = 0; $i <= 3; $i++ ) {
-              $end_point = "https://masak-apa-tomorisakura.vercel.app/api/recipes/:$i";
-              $recipes = curl($end_point)["results"];
-              foreach( $recipes as $recipe ){
-                echo render_recipes_explore($recipe);
-              }
+<script>
+  var i;
+__loop1:
+    for (i = 0; i <= 3; i++) {
+        var end_point;
+        end_point = "https://masak-apa-tomorisakura.vercel.app/api/recipes/:" + i + "";
+        var recipes;
+        recipes = curl(end_point)["results"];
+        var _key_;
+        __loop2:
+            for (_key_ in recipes) {
+                var recipe;
+                recipe = recipes[_key_];
+                console.log(render_recipes_explore(recipe));
             }
-            
-            ?>
+    }
+</script>
           </div>
         </div>
       </div>
